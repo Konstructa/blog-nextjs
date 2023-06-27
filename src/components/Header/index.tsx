@@ -11,10 +11,10 @@ export type HeaderProps = {
   showText?: boolean
 }
 
-export const Header = ({ blogName, blogDescription, logo, showText = false }: HeaderProps) => {
+export const Header = ({ blogName, blogDescription, logo, showText = true }: HeaderProps) => {
   return (
     <HeaderContainer>
-       <LogoLink srcImg={logo} text={`${blogName} - ${blogDescription}`} link="/" />
+      <LogoLink srcImg={logo} text={`${blogName} - ${blogDescription}`} link="/" />
       {showText &&
         <div>
           <Heading size="small" as="h2" colorDark={true}>{blogName}</Heading>
