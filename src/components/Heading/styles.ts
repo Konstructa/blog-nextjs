@@ -1,26 +1,26 @@
 import styled, { css } from 'styled-components';
 import { HeadingProps } from '.';
-import { MyTheme } from '@/styles/MyTheme';
+
 
 const titleSize = {
-  small: (theme: MyTheme) => css`
-    font-size: ${theme.font.sizes.medium};
+  small: () => css`
+    font-size: ${props => props.theme.font.sizes.medium};
   `,
-  medium: (theme: MyTheme) => css`
-    font-size: ${theme.font.sizes.large};
+  medium: () => css`
+    font-size: ${props => props.theme.font.sizes.large};
   `,
-  big: (theme: MyTheme) => css`
-    font-size: ${theme.font.sizes.xlarge};
+  big: () => css`
+    font-size: ${props => props.theme.font.sizes.xlarge};
   `,
-  huge: (theme: MyTheme) => css`
-    font-size: ${theme.font.sizes.xhuge};
-    ${mediaFont(theme)};
+  huge: () => css`
+    font-size: ${props => props.theme.font.sizes.xhuge};
+    ${mediaFont()};
   `,
 };
 
-const mediaFont = (theme: MyTheme) => css`
-  @media ${theme.media.lteMedium} {
-    font-size: ${theme.font.sizes.xlarge};
+const mediaFont = () => css`
+  @media ${props => props.theme.media.lteMedium} {
+    font-size: ${props => props.theme.font.sizes.xlarge};
   }
 `;
 
@@ -31,7 +31,7 @@ const titleCase = (uppercase: boolean) => css`
 export const Title = styled.h1<HeadingProps>`
   ${({ theme, colorDark, size, uppercase }) => css`
     color: ${colorDark ? theme.colors.primary : theme.colors.white};
-    ${titleSize[size ?? 'huge'](theme)};
+    ${titleSize[size ?? 'huge']()};
     ${titleCase(uppercase ?? false)};
   `}
 `;
