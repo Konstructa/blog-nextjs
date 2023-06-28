@@ -1,7 +1,7 @@
-import React from 'react'
 import { ArticleHeader, ArticleHeaderProps } from '../ArticleHeader'
 import { Container } from './styles';
 import { HtmlContent } from '../HtmlContent';
+import { PostContainer } from '../PostContainer';
 
 export type PostProps = {
   content: string;
@@ -20,16 +20,21 @@ export const Post = ({
 }: PostProps) => {
   return (
     <Container>
-      <ArticleHeader
-        author={author}
-        categories={categories}
-        title={title}
-        excerpt={excerpt}
-        id={id}
-        cover={cover}
-        createdAt={createdAt}
-      />
-      <HtmlContent html={content} />
+      <PostContainer size="max">
+        <ArticleHeader
+          author={author}
+          categories={categories}
+          title={title}
+          excerpt={excerpt}
+          id={id}
+          cover={cover}
+          createdAt={createdAt}
+        />
+      </PostContainer>
+
+      <PostContainer size="content">
+        <HtmlContent html={content} />
+      </PostContainer>
     </Container>
   )
 }
