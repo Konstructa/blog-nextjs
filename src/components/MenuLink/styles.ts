@@ -1,26 +1,16 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.a`
-  ${({ theme }) => css`
-    display: block;
-    text-decoration: none;
-    font-size: ${theme.font.sizes.small};
-    padding: ${theme.spacings.small};
-    color: ${theme.colors.primaryColor};
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0.76rem;
-      left: 50%;
-      width: 0;
-      height: 0.2rem;
-      background: ${theme.colors.secondaryColor};
-      transition: all 300ms ease-in-out;
-    }
-    &:hover::after {
-      left: 25%;
-      width: 50%;
-    }
-  `}
+  display: block;
+  color: ${(props) => props.theme.colors.white};
+  text-decoration: none;
+  margin-bottom: ${(props) => props.theme.spacings.small};
+  font-size: 1.8rem;
+  border-right: 0.5rem solid ${(props) => props.theme.colors.primary};
+  transition: all 300ms ease-in-out;
+  
+  &:hover {
+    border-right: 0.5rem solid ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.secondary};
+  }
 `;
