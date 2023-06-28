@@ -1,7 +1,7 @@
 import { Author } from '../../shared-typed/author';
 import { Category } from '../../shared-typed/category';
 import { StrapiImage } from '../../shared-typed/strapi-image';
-import { ArticleMeta } from '../ArticleMeta';
+import { ArticleMeta, ArticleMetaProps } from '../ArticleMeta';
 import { Heading } from '../Heading';
 import { Excerpt, ArticleContainer, Cover } from './styles';
 
@@ -10,10 +10,7 @@ export type ArticleHeaderProps = {
   title: string;
   excerpt: string;
   cover: StrapiImage;
-  author: Author;
-  categories: Category[];
-  createdAt: string;
-};
+} & ArticleMetaProps;
 
 export const ArticleHeader = ({
   title,
@@ -25,7 +22,7 @@ export const ArticleHeader = ({
 }: ArticleHeaderProps) => {
   return (
     <ArticleContainer>
-      <Heading size="big">{title}</Heading>
+      <Heading size="huge">{title}</Heading>
       <Excerpt>{excerpt}</Excerpt>
       <Cover src={cover.url} alt={title}/>
       <ArticleMeta categories={categories} author={author} createdAt={createdAt}/>

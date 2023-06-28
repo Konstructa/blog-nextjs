@@ -14,6 +14,7 @@ export const ArticleContainer = styled.header`
 
 export const Excerpt = styled.p`
   margin: ${(props) => props.theme.spacings.medium} 0;
+  font-size: ${(props) => props.theme.font.sizes.medium};
 `;
 
 export const Cover = styled.img`
