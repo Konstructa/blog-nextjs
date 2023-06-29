@@ -23,7 +23,7 @@ export const ArticleMeta = ({ createdAt, author = undefined, categories = [] }: 
         )}
 
         <time dateTime={createdAt}>{formatDate(createdAt)}</time>
-        <span className="separator"> | </span>
+
 
         {categories.length > 0 && (
           <>
