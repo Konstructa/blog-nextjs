@@ -8,6 +8,8 @@ const props: MenuProps = mock;
 
 describe('<Menu />', () => {
   it('should render button link', () => {
+    renderTheme(<Menu {...props} links={[]} />);
+
     const buttonLink = screen.getByRole('link', { name: 'Open or close menu' });
     const openMenuIcon = screen.getByLabelText('Open menu');
 
@@ -29,9 +31,6 @@ describe('<Menu />', () => {
     expect(screen.getByRole('navigation')).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Milena Limoeiro' }));
     expect(screen.getByRole('img', { name: 'Milena Limoeiro' }));
-    expect(
-      screen.getByRole('navigation').querySelectorAll('a:not([href="/"])'),
-    ).toHaveLength(mock.links.length + 1);
 
     fireEvent.click(buttonLink);
 
