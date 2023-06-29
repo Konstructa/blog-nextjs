@@ -110,6 +110,11 @@ exports[`<ArticleHeader /> should render heading, excerpt, cover img and meta 1`
            | 
         </span>
         <span
+          class="separator"
+        >
+           | 
+        </span>
+        <span
           class="categories"
         >
           <span>
