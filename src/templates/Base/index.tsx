@@ -2,7 +2,7 @@ import { Footer } from '../../components/Footer';
 import { GoTop } from '../../components/GoTop';
 import { Header } from '../../components/Header';
 import { Menu } from '../../components/Menu';
-import { SettingsStrapi } from '../../shared-typed/settings-strapi';
+import { SettingsStrapi } from '../../shared-types/settings-strapi';
 import { ContentContainer, FooterContainer, HeaderContainer, Wrapper } from './styles';
 
 
@@ -32,7 +32,7 @@ export const BaseTemplate = ({ settings, children }: BaseTemplateProps) => {
       <ContentContainer>{children}</ContentContainer>
 
       <FooterContainer>
-        <Footer footerHtml={settings.text}/>
+        <Footer footerHtml={settings.text} />
       </FooterContainer>
 
       <GoTop />

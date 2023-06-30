@@ -1,6 +1,6 @@
-import { Author } from '../../shared-typed/author';
-import { Category } from '../../shared-typed/category';
-import { StrapiImage } from '../../shared-typed/strapi-image';
+import { Author } from '../../shared-types/author';
+import { Category } from '../../shared-types/category';
+import { StrapiImage } from '../../shared-types/strapi-image';
 import { ArticleMeta, ArticleMetaProps } from '../ArticleMeta';
 import { Heading } from '../Heading';
 import { Excerpt, ArticleContainer, Cover } from './styles';
@@ -24,8 +24,8 @@ export const ArticleHeader = ({
     <ArticleContainer>
       <Heading size="huge">{title}</Heading>
       <Excerpt>{excerpt}</Excerpt>
-      <Cover src={cover.url} alt={title}/>
-      <ArticleMeta categories={categories} author={author} createdAt={createdAt}/>
+      <Cover src={cover.url} alt={title} />
+      <ArticleMeta categories={categories} author={author} createdAt={createdAt} />
     </ArticleContainer>
   )
 }

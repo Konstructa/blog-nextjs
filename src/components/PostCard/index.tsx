@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { Heading } from '../Heading';
 import { Cover, Excerpt, Wrapper } from './styles';
-import { StrapiImage } from '@/shared-typed/strapi-image';
- './styles';
+import { StrapiImage } from '@/shared-types/strapi-image';
+'./styles';
 
- export type PostCardProps = {
+export type PostCardProps = {
   id: string;
   title: string;
   cover: StrapiImage;
