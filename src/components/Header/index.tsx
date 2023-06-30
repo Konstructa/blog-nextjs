@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { HeaderContainer } from './styles'
+import { Content, HeaderContainer } from './styles'
 import { LogoLink } from '../LogoLink'
 import { Heading } from '../Heading'
 
@@ -15,11 +15,12 @@ export const Header = ({ blogName, blogDescription, logo, showText = true }: Hea
   return (
     <HeaderContainer>
       <LogoLink srcImg={logo} text={`${blogName} - ${blogDescription}`} link="/" />
+
       {showText &&
-        <div>
+        <Content>
           <Heading size="small" as="h2" colorDark={true}>{blogName}</Heading>
           <p>{blogDescription}</p>
-        </div>
+        </Content>
       }
 
     </HeaderContainer>

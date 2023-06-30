@@ -31,4 +31,23 @@ export const HeaderContainer = styled.header`
     ${HeadingStyles} {
       margin: 0 0 calc(${props => props.theme.spacings.small} - 1rem);
     }
+
+    @media ${props => props.theme.media.lteSmall} {
+      display: flex;
+      flex-flow: column wrap;
+      & > ${HeadingStyles} {
+        margin: 0 0 ${props => props.theme.spacings.medium} 0;
+      }
+    }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: ${props => props.theme.spacings.large};
+  max-width: 48rem;
+
+  @media ${props => props.theme.media.lteSmall} {
+    margin-left: 0;
+  }
 `;
