@@ -90,9 +90,9 @@ exports[`<ArticleHeader /> should render heading, excerpt, cover img and meta 1`
           Por 
         </span>
         <a
-          href="/author/otavio-miranda"
+          href="/author/milena-limoeiro"
         >
-          Otávio Miranda
+          Milena Limoeiro
         </a>
         <span
           class="separator"
@@ -104,11 +104,6 @@ exports[`<ArticleHeader /> should render heading, excerpt, cover img and meta 1`
         >
           19 de abr. de 2020
         </time>
-        <span
-          class="separator"
-        >
-           | 
-        </span>
         <span
           class="separator"
         >

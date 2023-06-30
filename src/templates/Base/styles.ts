@@ -11,6 +11,7 @@ export const ContentContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   margin-bottom: ${props => props.theme.spacings.xhuge};
+  padding-left: 2rem
 `;
 
 export const FooterContainer = styled.div`

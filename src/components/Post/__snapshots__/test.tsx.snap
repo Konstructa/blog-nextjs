@@ -244,9 +244,9 @@ exports[`<Post /> should render header, excerpt, cover, metadata and post 1`] = 
               Por 
             </span>
             <a
-              href="/author/otavio-miranda"
+              href="/author/milena-limoeiro"
             >
-              Otávio Miranda
+              Milena Limoeiro
             </a>
             <span
               class="separator"
@@ -258,11 +258,6 @@ exports[`<Post /> should render header, excerpt, cover, metadata and post 1`] = 
             >
               19 de abr. de 2020
             </time>
-            <span
-              class="separator"
-            >
-               | 
-            </span>
             <span
               class="separator"
             >
@@ -307,7 +302,7 @@ exports[`<Post /> should render header, excerpt, cover, metadata and post 1`] = 
           </i>
           ) sed cu - 
           <u>
-            Otávio Miranda
+            Milena Limoeiro
           </u>
           . Sea 
           <code>
