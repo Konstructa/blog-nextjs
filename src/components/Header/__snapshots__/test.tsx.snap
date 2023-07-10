@@ -8,7 +8,7 @@ exports[`<Header /> should match snapshot 1`] = `
   text-transform: uppercase;
 }
 
-.c4 {
+.c5 {
   color: #000000;
   line-height: 1.2;
   font-size: 2.4rem;
@@ -60,6 +60,18 @@ exports[`<Header /> should match snapshot 1`] = `
   margin: 0 0 calc(1.6rem - 1rem);
 }
 
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  margin-left: 3.2rem;
+  max-width: 48rem;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,6 +90,28 @@ exports[`<Header /> should match snapshot 1`] = `
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
+}
+
+@media (max-width:360px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .c0 > .c1 {
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+@media (max-width:360px) {
+  .c4 {
+    margin-left: 0;
+  }
 }
 
 <div>
@@ -101,9 +135,11 @@ exports[`<Header /> should match snapshot 1`] = `
         </a>
       </a>
     </h1>
-    <div>
+    <div
+      class="c4"
+    >
       <h2
-        class="c1 c4"
+        class="c1 c5"
       >
         Milena Limoeiro
       </h2>
